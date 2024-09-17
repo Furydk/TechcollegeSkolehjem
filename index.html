@@ -120,15 +120,6 @@
     <button id="nextMonth">&gt;</button>
   </div>
   <div class="calendar"></div>
-  <div class="day header">Mon</div>
-  <div class="day header">Tue</div>
-  <div class="day header">Wed</div>
-  <div class="day header">Thu</div>
-  <div class="day header">Fri</div>
-  <div class="day header">Sat</div>
-  <div class="day header">Sun</div>
-  <!-- Days will be populated by JavaScript -->
-  </div>
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
@@ -153,9 +144,6 @@
     const option1 = document.getElementById('option1');
     const option2 = document.getElementById('option2');
     const selectedDateElement = document.getElementById('selectedDate');
-    const roomInput = document.getElementById('roomInput');
-    const submitRoom = document.getElementById('submitRoom');
-    const roomNumberInput = document.getElementById('roomNumber');
 
     let currentDate = new Date();
     let selectedDate = null;
@@ -241,17 +229,6 @@
     window.addEventListener('click', (event) => {
       if (event.target == modal) {
         modal.style.display = 'none';
-      }
-    });
-
-    submitRoom.addEventListener('click', () => {
-      const roomNumber = roomNumberInput.value.trim();
-      if (roomNumber) {
-        roomInput.style.display = 'none';
-        calendar.style.display = 'grid';
-        renderCalendar(currentDate);
-      } else {
-        alert('Please enter a room number.');
       }
     });
 
